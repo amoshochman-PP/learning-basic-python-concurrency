@@ -1,8 +1,12 @@
+import asyncio
 import re
 import time
 from functools import wraps
 
 import requests
+
+LOOPS_NUM = 3
+TASKS_NUM = 5
 
 urls = ["https://www.python.org", "https://docs.python.org/3/", "https://www.djangoproject.com",
         "https://www.github.com", "https://www.mozilla.org", "https://www.gnu.org", "https://www.nasa.gov",
@@ -48,3 +52,16 @@ def count_primes(start, end):
     )
     print(f"Found {total} primes between {start:,} and {end:,}")
     return total
+
+
+def wait():
+    time.sleep(1)
+    print(f"Slept 1 sec")
+
+
+async def async_wait():
+    await asyncio.sleep(1)
+    print(f"Slept 1 sec")
+
+
+

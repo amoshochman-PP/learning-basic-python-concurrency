@@ -3,8 +3,6 @@ import threading
 from common import timer, print_title_from_url, urls
 
 
-COUNTER = 0
-
 @timer
 def print_titles():
     threads = []

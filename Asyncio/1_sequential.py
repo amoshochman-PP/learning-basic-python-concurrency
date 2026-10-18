@@ -1,13 +1,10 @@
-import time
-
-from common import timer
+from common import timer, wait
 
 
 @timer
 def loop_wait():
     for i in range(5):
-        time.sleep(1)
-        print(f"Slept 1 sec")
+        wait()
 
 
 loop_wait()

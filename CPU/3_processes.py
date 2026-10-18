@@ -1,12 +1,12 @@
 import multiprocessing
-from common import timer, count_primes
+from common import timer, count_primes, LOOPS_NUM
 
 
 @timer
 def loop_count_primes():
     processes = []
 
-    for i in range(3):
+    for i in range(LOOPS_NUM):
         process = multiprocessing.Process(target=count_primes, args=(i * 1_000_000, (i + 1) * 1_000_000))
         processes.append(process)
         process.start()

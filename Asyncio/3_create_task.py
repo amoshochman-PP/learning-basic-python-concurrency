@@ -1,18 +1,11 @@
 import asyncio
-from common import timer
-
-NUMBER_OF_TASKS = 5
-
-
-async def wait():
-    await asyncio.sleep(1)
-    print(f"Slept 1 sec")
+from common import timer, TASKS_NUM, async_wait
 
 
 async def loop_wait():
     tasks = []
-    for i in range(NUMBER_OF_TASKS):
-        task = asyncio.create_task(wait())
+    for i in range(TASKS_NUM):
+        task = asyncio.create_task(async_wait())
         tasks.append(task)
     for task in tasks:
         await task
