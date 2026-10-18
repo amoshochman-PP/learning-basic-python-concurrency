@@ -5,8 +5,8 @@ NUMBER_OF_TASKS = 5
 
 
 async def wait():
-    print(f"Sleeping 1 second")
     await asyncio.sleep(1)
+    print(f"Slept 1 sec")
 
 
 async def loop_wait():

@@ -6,7 +6,7 @@ from common import timer, count_primes
 def loop_count_primes():
     threads = []
 
-    for i in range(5):
+    for i in range(3):
         thread = threading.Thread(
             target=count_primes,
             args=(i * 1_000_000, (i + 1) * 1_000_000)

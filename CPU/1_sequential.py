@@ -3,7 +3,7 @@ from common import timer, count_primes
 
 @timer
 def loop_count_primes():
-    for i in range(5):
+    for i in range(3):
         count_primes(i * 1_000_000, (i + 1) * 1_000_000)
 
 

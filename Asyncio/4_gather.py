@@ -2,13 +2,13 @@ import asyncio
 from common import timer
 
 
-async def wait(i):
-    print(f"Sleeping: {i}")
+async def wait():
     await asyncio.sleep(1)
+    print(f"Sleept 1 sec")
 
 
 async def loop_wait():
-    function_calls = [wait(i) for i in range(5)]
+    function_calls = [wait() for _ in range(5)]
     await asyncio.gather(*function_calls)
 
 

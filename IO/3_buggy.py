@@ -23,3 +23,4 @@ def print_titles():
 
 
 print_titles()
+print(COUNTER)

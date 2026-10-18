@@ -34,7 +34,7 @@ def timer(func):
         start = time.perf_counter()
         result = func(*args, **kwargs)
         print(f"\n{'=' * 40}")
-        print(f"TOTAL EXECUTION TIME: {time.perf_counter() - start:.2f} seconds")
+        print(f"TOTAL EXECUTION TIME: {time.perf_counter() - start:.4f} seconds")
         print(f"{'=' * 40}")
         return result
 
