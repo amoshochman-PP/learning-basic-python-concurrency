@@ -1,11 +1,11 @@
 import asyncio
-from common import timer, TASKS_NUM, async_wait
+from common import timer, TASKS_NUM, asyncio_wait
 
 
 async def loop_wait():
     tasks = []
     for i in range(TASKS_NUM):
-        task = asyncio.create_task(async_wait())
+        task = asyncio.create_task(asyncio_wait())
         tasks.append(task)
     for task in tasks:
         await task

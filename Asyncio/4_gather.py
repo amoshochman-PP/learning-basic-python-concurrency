@@ -1,9 +1,9 @@
 import asyncio
-from common import timer, async_wait
+from common import timer, asyncio_wait
 
 
 async def loop_wait():
-    function_calls = [async_wait() for _ in range(5)]
+    function_calls = [asyncio_wait() for _ in range(5)]
     await asyncio.gather(*function_calls)
 
 

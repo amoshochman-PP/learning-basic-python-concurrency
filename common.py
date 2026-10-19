@@ -59,7 +59,7 @@ def wait():
     print(f"Slept 1 sec")
 
 
-async def async_wait():
+async def asyncio_wait():
     await asyncio.sleep(1)
     print(f"Slept 1 sec")
 
