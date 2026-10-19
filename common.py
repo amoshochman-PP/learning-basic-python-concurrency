@@ -5,7 +5,7 @@ from functools import wraps
 
 import requests
 
-LOOPS_NUM = 3
+LOOPS_NUM = 6
 TASKS_NUM = 5
 
 urls = ["https://www.python.org", "https://docs.python.org/3/", "https://www.djangoproject.com",
