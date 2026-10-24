@@ -1,6 +1,9 @@
 import asyncio
-from common import timer, asyncio_wait
+from common import timer
 
+async def asyncio_wait():
+    await asyncio.sleep(1)
+    print(f"Slept 1 sec")
 
 async def loop_wait():
     function_calls = [asyncio_wait() for _ in range(5)]

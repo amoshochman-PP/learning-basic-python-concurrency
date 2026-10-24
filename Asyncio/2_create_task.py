@@ -1,6 +1,9 @@
 import asyncio
-from common import timer, TASKS_NUM, asyncio_wait
+from common import timer, TASKS_NUM
 
+async def asyncio_wait():
+    await asyncio.sleep(1)
+    print(f"Slept 1 sec")
 
 async def loop_wait():
     tasks = []
